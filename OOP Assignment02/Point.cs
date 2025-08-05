@@ -20,5 +20,5 @@ namespace OOP_Assignment02
         {
             return $"X : {X}, Y : {Y}";
         }
-    }
+    } 
 }

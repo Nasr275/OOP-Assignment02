@@ -26,17 +26,43 @@ namespace OOP_Assignment02
 
 
             #region Q2 Create a struct called "Point" to represent a 2D point with properties "X" and "Y".Write a C# program that takes two points as input from the user and calculates the distance between them.
-            Console.WriteLine("Please enter data for the first point");
-            Point p1 = CreatePoint();
-            Console.WriteLine("Please enter data for the second point");
-            Point p2 = CreatePoint();
+            //Console.WriteLine("Please enter data for the first point");
+            //Point p1 = CreatePoint();
+            //Console.WriteLine("Please enter data for the second point");
+            //Point p2 = CreatePoint();
 
-            Console.WriteLine($"Distance between the two points: {CalculateDistance(p1, p2)}");
+            //Console.WriteLine($"Distance between the two points: {CalculateDistance(p1, p2)}");
             #endregion
 
 
+            #region Q3 Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
+            Person[] people = new Person[3];
 
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine($"Enter details for person {i + 1}:");
 
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+
+                Console.Write("Age: ");
+                int age = int.Parse(Console.ReadLine());
+
+                people[i] = new Person(name, age);
+                Console.WriteLine();
+            }
+
+            Person oldest = people[0];
+
+            for (int i = 1; i < people.Length; i++)
+            {
+                if (people[i].Age > oldest.Age)
+                {
+                    oldest = people[i];
+                }
+            }
+            Console.WriteLine($"The oldest person is {oldest.Name}, Age: {oldest.Age}");
+            #endregion
         }
     }
 }

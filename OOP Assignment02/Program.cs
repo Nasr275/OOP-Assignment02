@@ -22,17 +22,18 @@ namespace OOP_Assignment02
 
         static void Main(string[] args)
         {
-            #region
-            Person[] people = new Person[3];
-            people[0] = new Person("Nasr", 23);
-            people[1] = new Person("Omar",24);
-            people[2] = new Person("Adel",22);
+            #region Q1.Define a struct "Person" with properties "Name" and "Age". Create an array of three "Person" objects and populate it with data. Then, write a C# program to display the details of all the persons in the array.
 
-            for (int i = 0; i < people.Length; i++)
-            {
-                Console.WriteLine($"Person number {i+1} Name: {people[i].Name}");
-                Console.WriteLine($"Person number {i+1} Age: {people[i].Age}");
-            }
+            //Person[] people = new Person[3];
+            //people[0] = new Person("Nasr", 23);
+            //people[1] = new Person("Omar",24);
+            //people[2] = new Person("Adel",22);
+
+            //for (int i = 0; i < people.Length; i++)
+            //{
+            //    Console.WriteLine($"Person number {i+1} Name: {people[i].Name}");
+            //    Console.WriteLine($"Person number {i+1} Age: {people[i].Age}");
+            //}
 
             #endregion
 
@@ -75,6 +76,21 @@ namespace OOP_Assignment02
             //}
             //Console.WriteLine($"The oldest person is {oldest.Name}, Age: {oldest.Age}");
             #endregion
+
+            #region Q4
+            Rectangle rect = new Rectangle();
+
+            rect.Width = 1.35;
+            rect.Height = 2.45;
+
+            //rect.Width = -1.43;
+
+            Console.WriteLine("\nRectangle Info:");
+            rect.DisplayInfo();
+
+
+            #endregion
+
         }
     }
 }
